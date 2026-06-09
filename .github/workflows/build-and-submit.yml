@@ -30,8 +30,11 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: Inject Play Store service account
+        if: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT != '' }}
         run: |
           echo '${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT }}' > google-play-service-account.json
 
       - name: Build AAB & Submit to Play Store
         run: eas build --platform android --profile production-submit --non-interactive
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
