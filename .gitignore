@@ -6,6 +6,7 @@ node_modules/
 # Expo
 .expo/
 dist/
+dist-*/
 web-build/
 expo-env.d.ts
 
@@ -32,6 +33,9 @@ yarn-error.*
 
 # local env files
 .env*.local
+
+# Google Play service account (CI/CD)
+google-play-service-account.json
 
 # typescript
 *.tsbuildinfo

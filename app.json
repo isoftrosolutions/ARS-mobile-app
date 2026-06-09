@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "easyshopping-mobile-new",
-    "slug": "easyshopping-mobile-new",
+    "owner": "devbarat",
+    "name": "Easy Shopping ARS",
+    "slug": "easy-shopping-ars-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,10 +21,27 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.isoftro.easyshoppingars"
+    },
+    "extra": {
+      "apiBaseUrl": "https://easyshoppingars.com/api/v1",
+      "eas": {
+        "projectId": "fb70f3b3-fa36-498b-ac78-67c1cefef073"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#ea6c00"
+        }
+      ]
+    ]
   }
 }
