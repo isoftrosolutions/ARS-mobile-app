@@ -37,7 +37,12 @@ jobs:
         env:
           GOOGLE_PLAY_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT }}
 
-      - name: Build AAB & Submit to Play Store
-        run: eas build --platform android --profile production-submit --non-interactive
+      - name: Build AAB
+        run: eas build --platform android --profile production --non-interactive --wait
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Submit to Play Store
+        run: eas submit --platform android --profile production --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}

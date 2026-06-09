@@ -22,11 +22,7 @@
         "buildType": "app-bundle"
       }
     },
-    "production-submit": {
-      "extends": "production",
-      "autoSubmit": true,
-      "submitProfile": "production"
-    }
+
   },
   "submit": {
     "production": {
